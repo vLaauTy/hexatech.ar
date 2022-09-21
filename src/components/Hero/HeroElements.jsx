@@ -171,6 +171,11 @@ height: 603px;
     left: 30%;
   }
 
+  @media screen and (max-width: 440px) {
+    width:230px;
+    height: 345px;
+  }
+
   @media screen and (max-width: 400px) {
     width: 220px;
     height: 316px;
@@ -393,6 +398,11 @@ export const HeroWrapper = styled.div`
   @media screen and (max-width: 480px) {
     width:460px;
     height: 400px;
+  }
+
+  @media screen and (max-width: 440px) {
+    width:400px;
+    height: 340px;
   }
 
   @media screen and (max-width: 400px) {
