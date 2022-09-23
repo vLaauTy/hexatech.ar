@@ -22,7 +22,7 @@ const Home = () => {
       <Navbar toggle={toggle}/>
       <Hero/>
       <Productos/>
-      {/* <Nosotros/> */}
+      <Nosotros/>
       
       <Contacto/>
     </>

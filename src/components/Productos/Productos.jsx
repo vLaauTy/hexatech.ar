@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import {
-  ButtonText,
-  CategoryButton,
   CategoryButtonimg,
   CategoryCardInfo,
   CategoryContainer,
@@ -29,12 +27,15 @@ const Productos = () => {
   }, []);
 
   const [mouse, setMouse] = useState(false);
-  const [mouse2, setMouse2] = useState(false);
-  const [mouse3, setMouse3] = useState(false);
+  const variants = {
+    
+    whileInViewText:{y:0, opacity:1, transition:{duration:1}},
+    initialText2: {y:100, opacity:0}
+  } 
   return (
     <CategoryContainer id="productos">
       <CategoryWrapper>
-        <CategoryTittle>Nuestros Productos</CategoryTittle>
+        <CategoryTittle variants={variants} initial="initialText2" whileInView="whileInViewText" viewport="viewport">Nuestros Productos</CategoryTittle>
         <ProductCards />
         <CategoryCardsMobile>
           <Slideshow controles={true}>
@@ -52,11 +53,12 @@ const Productos = () => {
                     <CategoryImageContainer>
                       
                     <CategoryImage src={product.img}></CategoryImage>
-                    <CategoryButtonimg
+                    <a href="https://www.esthersola.com/css-centrar-postion-absolute/"><CategoryButtonimg
                       onMouseEnter={() => setMouse(true)}
                       onMouseLeave={() => setMouse(false)}
                       src={mouse ? "./assets/BotonFlecha.png" : "./assets/BotonVer.png"}
-                    ></CategoryButtonimg>
+                    ></CategoryButtonimg></a>
+                    
                   </CategoryImageContainer>
                   </CategoryCardInfo>
                 </CategoryCardMobile>
@@ -70,3 +72,4 @@ const Productos = () => {
 };
 
 export default Productos;
+

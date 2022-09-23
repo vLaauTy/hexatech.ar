@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import {
@@ -9,43 +9,24 @@ import {
   NavMenu,
   NavLinks,
   NavItem,
-  NavBtn,
-  NavBtnLink,
   NavIcon,
   NavText,
 } from "./NavbarElements";
-import { animateScroll as scroll } from "react-scroll";
+
 
 const Navbar = ({ toggle }) => {
-  // FUNCION PARA QUE AL PRINCIPIO SEA TRANSPARENTE
-
-  const [scrollNav, setScrollNav] = useState(false);
-  const changeNav = () => {
-    if (window.scrollY >= 80) {
-      setScrollNav(true);
-    } else {
-      setScrollNav(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", changeNav);
-  }, []);
 
   
 
 
-  // FUNCION PARA QUE AL APRETAR EL LOGO VUELVA AL TOP
-  const toggleHome = () => {
-    scroll.scrollToTop();
-  };
+
 
   return (
     <>
       <IconContext.Provider value={{ color: "#324093" }}>
         <Nav >
           <NavbarContainer>
-            <NavLogo to="/" onClick={toggleHome}>
+            <NavLogo to="/" >
               <NavIcon src="./assets/logo.png" />
               <NavText>Hexa Technology</NavText>
             </NavLogo>
@@ -56,7 +37,6 @@ const Navbar = ({ toggle }) => {
               <NavItem>
                 <NavLinks
                   to="home"
-                  
                 >
                   Inicio
                 </NavLinks>
