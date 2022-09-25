@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Contacto from '../components/Contacto/Contacto';
+import { Footer } from '../components/Footer';
 
 import Hero from '../components/Hero/Hero'
 
@@ -25,6 +26,7 @@ const Home = () => {
       <Nosotros/>
       
       <Contacto/>
+      <Footer/>
     </>
   )
 }
