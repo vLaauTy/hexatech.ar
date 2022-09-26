@@ -1,6 +1,8 @@
 import React from 'react'
+import { dataSocials } from '../../data/dataInfo';
 import { 
   Anchor, 
+  AnchorSocial, 
   ArrowContainer, 
   ArrowUp, 
   BlueLine, 
@@ -22,6 +24,8 @@ import {
 
 
 export const Footer = () => {
+
+  console.log(dataSocials[0].LinkFacebook);
   return (
     <>
     <FooterContainer>
@@ -46,10 +50,8 @@ export const Footer = () => {
               offset={-80}>
                 Nosotros  
             </Header>
-            <Anchor href=''>Conocenos</Anchor>
-            <Anchor href=''>Misión</Anchor>
-            <Anchor href=''>Vision</Anchor>
-            <Anchor href=''>Valores</Anchor>
+            <Anchor to='nosotros'>Conocenos</Anchor>
+            
         </TextContainer>
         <TextContainer>
             <Header 
@@ -62,8 +64,8 @@ export const Footer = () => {
               offset={-80}>
                 Productos
             </Header>
-            <Anchor href=''>Hexa Tech</Anchor>
-            <Anchor href=''>Hexa Temp</Anchor>
+            <Anchor to="productos">Hexa Tech</Anchor>
+            <Anchor to="productos">Hexa Temp</Anchor>
         </TextContainer>
         <TextContainer>
             <Header 
@@ -76,16 +78,16 @@ export const Footer = () => {
               offset={-80}>
                 Contactanos
             </Header>
-            <Anchor href=''>Facebook</Anchor>
-            <Anchor href=''>Instagram</Anchor>
-            <Anchor href=''>Tienda</Anchor>
+            <AnchorSocial href={dataSocials[0].LinkFacebook} target="_blank" rel="noreferrer" >Facebook</AnchorSocial>
+            <AnchorSocial href={dataSocials[0].LinkInstagram} target="_blank" rel="noreferrer">Instagram</AnchorSocial>
+            <AnchorSocial href={dataSocials[0].LinkTienda} target="_blank" rel="noreferrer">Tienda</AnchorSocial>
         </TextContainer>
     </FooterContainer>
         <FooterInnerContainer>
           <FooterSM>
             <FooterGroup>
-            <FacebookLogo/>
-            <InstagramLogo/>              
+            <a href={dataSocials[0]} target="_blank" rel="noreferrer"><FacebookLogo/></a>
+            <a href={dataSocials[1]} target="_blank" rel="noreferrer"><InstagramLogo/></a>              
             <TextContainer>
               <Paragraph color='var(--BlueColor)'>
                 Calidad y duración garantizados. 

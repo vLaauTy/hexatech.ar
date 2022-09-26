@@ -33,10 +33,12 @@ const Hero = () => {
       <HeroContent id='c'>
         <HeroText>
           <HeroTextWrapper>
-            <HeroP variants={variants} initial="initialText" whileInView="whileInViewText" viewport="viewport">Brindamos producto de </HeroP>
+            <HeroP variants={variants} initial="initialText" whileInView="whileInViewText" viewport="viewport">Brindamos productos de </HeroP>
             <HeroH1 variants={variants} initial="initialText2" whileInView="whileInViewText" viewport="viewport"> CALIDAD Y DURABILIDAD</HeroH1>
+            
           </HeroTextWrapper>
         </HeroText>
+        
         <HeroImage id='i'>
           <HeroWrapper id='e'>
             <Image src='./assets/Rectangle 5.png'></Image>

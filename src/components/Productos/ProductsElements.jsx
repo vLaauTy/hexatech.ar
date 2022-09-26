@@ -8,6 +8,7 @@ export const CategoryContainer = styled.div`
   justify-content: center;
   background: #fff;
   height: 100vh;
+  position: relative;
 
   @media screen and (max-width: 768px) {
     padding: 10px;
@@ -15,12 +16,63 @@ export const CategoryContainer = styled.div`
     align-items: center;
   }
 
+  
+
+  @media screen and (max-width: 600px) {
+    padding: 10px;
+    position: relative;
+    align-items: flex-end;
+    justify-content:flex-end;
+    margin:auto;
+  }
+
+  
+
   @media screen and (max-height: 1000px) {
-    height: 120vh;
+    height: 100vh;
   }
 
   @media screen and (max-height: 800px) {
-    height: 140vh;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  @media screen and (max-height: 750px) {
+    height: 150vh;
+    justify-content: center;
+  }
+
+  @media screen and (max-height: 700px) {
+    height: 170vh;
+  }
+
+  @media screen and (max-height: 660px) {
+    height:180vh;
+  }
+
+  @media (max-width:600px) and (max-height: 880px) {
+      
+      height:110vh;
+    }
+
+  @media (max-width: 1024px) and (max-height: 700px) {
+    height: 130vh;
+  }
+
+
+
+
+
+
+
+  @media screen and (max-height: 660px) {
+    height: 180vh;
+    justify-content: center;
+  }
+
+  @media screen and (max-height: 600px) {
+    height: 230vh;
+    justify-content: center;
   }
 `;
 
@@ -34,6 +86,39 @@ export const CategoryWrapper = styled.div`
   @media screen and (max-width: 768px) {
     position: relative;
     justify-content: center;
+  }
+
+  @media screen and (max-height: 660px) {
+    height:180vh;
+  }
+
+  @media screen and (max-width:600px) {
+    align-items: center;
+    justify-content:center;
+    
+  }
+
+  @media (max-width:768px) and (max-height: 1050px) {
+      
+      justify-content:flex-start;
+  }
+
+  @media (max-width:600px) and (max-height: 1050px) {
+      
+    align-items: center;
+    justify-content:center;
+  }
+
+  @media (max-width:600px) and (max-height: 950px) {
+      
+      align-items: center;
+      justify-content:flex-end;
+    }
+
+    
+
+  @media screen and (max-height: 800px) {
+    height: auto;
   }
 `;
 
@@ -51,6 +136,23 @@ export const CategoryTittle = styled(motion.h2)`
   @media screen and (max-width: 768px) {
     font-size: 35px;
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 35px;
+  }
+
+  @media screen and (max-height: 800px) {
+    margin-top: 0;
+    margin: 3rem auto;
+  }
+
+  /* @media screen and (max-height: 675px) {
+    margin: 10rem auto;
+  }
+
+  @media screen and (max-height: 645px) {
+    margin: 13rem auto;
+  } */
 `;
 
 export const CategoryCards = styled.div`
@@ -255,7 +357,6 @@ export const CategoryPolygon = styled.div`
   clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
   margin-top: 60px;
   margin-left: 90px;
-  border-radius: 10px;
   background: #c8c9da;
   height: 346px;
   width: 263px;
@@ -304,22 +405,23 @@ export const CategoryButtonimg = styled.img`
   cursor: pointer;
   position: absolute;
   pointer-events: all;
-  top: 14rem;
-  left: 10rem;
+  top: 15.5rem;
+  left: 8rem;
 
   @media screen and (max-width: 1280px) {
-    left: 8rem;
+    left: 6rem;
   }
 
   @media screen and (max-width: 1090px) {
-    left: 6rem;
+    left: 4rem;
+    top: 16rem;
     width: 140px;
     height: 110px;
   }
 
   @media screen and (max-width: 768px) {
     left: 7.5rem;
-    top: 18.5rem;
+    top: 21rem;
     width: 130px;
     height: 100px;
   }

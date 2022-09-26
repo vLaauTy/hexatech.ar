@@ -15,11 +15,7 @@ import {
 
 
 const Navbar = ({ toggle }) => {
-
-  
-
-
-
+ 
 
   return (
     <>
@@ -34,9 +30,11 @@ const Navbar = ({ toggle }) => {
               <FaBars />
             </MobileIcon>
             <NavMenu>
-              <NavItem>
+              <NavItem >
                 <NavLinks
                   to="home"
+                  hover
+                  
                 >
                   Inicio
                 </NavLinks>

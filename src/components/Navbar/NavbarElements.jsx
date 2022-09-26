@@ -64,10 +64,7 @@ export const MobileIcon = styled.div`
     color: #324093;
   }
 
-  @media screen and (max-width: 480px) {
-    right: 0;
-    font-size: 1.3rem;
-  }
+ 
 `;
 export const NavMenu = styled.ul`
   display: flex;
@@ -83,19 +80,22 @@ export const NavMenu = styled.ul`
 `;
 export const NavItem = styled.li`
   height: 80px;
+
 `;
 export const NavLinks = styled(LinkS)`
   display: flex;
   align-items: center;
   padding: 0;
-  height: 100%;
+  height: 50%;
   cursor: pointer;
   margin: 0 2.8rem;
+
   font-family: "Teko", sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
   line-height: 100px;
   transition: all 100ms ease-out;
+
   border-bottom: ${(props) =>
     props.hover? "3px solid var(--BlueColor)" : ""};
   color: ${(props) =>
@@ -105,6 +105,7 @@ export const NavLinks = styled(LinkS)`
     border-bottom: 3px solid var(--BlueColor);
     color:var(--BlueColor);
     transition:all 100ms ease-out;
+    
   }
 
   @media screen and (max-width: 1000px) {
@@ -120,6 +121,11 @@ export const NavIcon = styled.img`
   font-size: 2.5rem;
   width: 60px;
   height: 60px;
+
+  @media screen and (max-width: 600px) {
+    width: 40px;
+  height:40px;
+  }
 `;
 
 export const NavText = styled.span`
@@ -130,4 +136,9 @@ export const NavText = styled.span`
   font-weight: 400;
   letter-spacing: 1.5px;
   line-height: 25px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
+    line-height: 18px;
+  }
 `;

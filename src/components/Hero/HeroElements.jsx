@@ -7,7 +7,7 @@ export const HeroContainer = styled.div`
   z-index: 1;
   background: var(--BlueColor200);
   width:100%;
-  
+  position:relative;
 
   :before {
     content: "";
@@ -39,12 +39,12 @@ export const HeroContainer = styled.div`
   }
 
   @media screen and (max-height: 800px) {
-    height: 150vh;
+    height: 100vh;
   }
 
 
   @media screen and (max-height: 700px) {
-    height: 180vh;
+    
   }
 
 
@@ -56,6 +56,8 @@ export const HeroContainer = styled.div`
   @media (max-width: 1024px) and (max-height: 800px) {
     height: 170vh;
   }
+
+  
   @media (max-width: 480px) and (max-height: 800px) {
     height: 125vh;
   }
@@ -85,21 +87,29 @@ export const HeroContent = styled.div`
   @media screen and (max-width: 1024px) {
     height: 150vh;
   }
+
+  @media (max-width: 480px) and (max-height: 1050px) {
+    height: 100vh;
+  }
+
+  @media (max-width: 480px) and (min-height: 1050px) {
+    height: 100vh;
+  }
 `;
 
 export const HeroText = styled.div`
   position: absolute;
   width: 656px;
-  height: 200px;
+  height: 600px;
   top:15rem;
-  margin-left: 165px;
+  margin-left: 10rem;
 
   @media screen and (max-width: 1440px) {
-    margin-left: 95px;
+    margin-left: 6rem       ;
   }
 
   @media screen and (max-width: 1280px) {
-    margin-left: 55px;
+    margin-left: 3rem;
   }
 
   @media screen and (max-width: 1024px) {
@@ -274,7 +284,7 @@ margin: auto;
 
 export const HeroH1 = styled(motion.h1)`
   color: var(--BlueColor);
-  font-size: 7rem;
+  font-size: 6rem;
   font-style: normal;
   font-weight: 500;
   line-height: 100px;
@@ -300,8 +310,8 @@ export const HeroH1 = styled(motion.h1)`
     line-height: 80px;
   }
   @media screen and (max-width: 1024px) {
-    font-size: 120px;
-    line-height: 100px;
+    font-size: 5rem;
+    line-height: 4rem;
     letter-spacing: 0.04em;
   }
 
@@ -378,7 +388,7 @@ export const HeroP = styled(motion.p)`
 export const HeroImage = styled.div`
   height: 583px;
   width: 100%;
-  margin-top: 100px;
+  margin-top: 0px;
   position: absolute;
   max-width:1680px;
   display: flex;
@@ -402,23 +412,20 @@ export const HeroImage = styled.div`
   }
   @media screen and (max-width: 1024px) {
     position: absolute;
-    top: 60%;
+    top: 45%;
   }
 
   @media screen and (max-width: 600px) {
     position: absolute;
-    top: 48%;
+    top: 43%;
   }
 
   @media screen and (max-width: 480px) {
     position: absolute;
-    top: 30%;
+    top: 40%;
   }
 
-  @media screen and (max-width: 400px) {
-    position: absolute;
-    top: 25%;
-  }
+
 `;
 
 export const HeroWrapper = styled.div`
@@ -728,11 +735,12 @@ export const Form2 = styled(Form)`
 
 export const ButtonHexa = styled(LinkS)`
   background: var(--OrangeColor);
-  position: absolute;
-  width: 385px;
+
+  width: 22.5rem;
   height: 72px;
-  margin-left: 164px;
-  top: 550px;
+ margin-left:10rem;
+ margin-top:20rem; 
+ text-align:center;
   padding: 16px 24px;
   border: none;
   border-radius: 10px;
@@ -741,100 +749,135 @@ export const ButtonHexa = styled(LinkS)`
   font-size: 40px;
   font-style: normal;
   line-height: 40px;
-  text-align: center;
   letter-spacing: 0.02em;
   color: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  z-index: 99;
-  outline: none;
+  outline:none;
+  pointer-events:all;
   cursor: pointer;
+  outline:none;
+  z-index:99;
+
+  &:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+      #fc6a05;
+  }
 
   @media screen and (max-width: 1440px) {
-    margin-left: 95px;
+    margin-left: 6rem;
+    
   }
-  @media screen and (max-width: 700px) {
-    margin-left: 55px;
-    top: 390px;
+
+  @media screen and (max-width: 1240px) {
+    margin-left: 3rem;
+    
   }
+ 
+  
 
   @media screen and (max-width: 1024px) {
-    margin-left: 55px;
-    top: 450px;
+    
+    
+    margin-bottom:40rem; 
   }
 
-  @media (max-width: 1024px) and (max-height: 700px) {
+  @media screen and (max-width: 700px) {
     margin-left: 55px;
-    top: 400px;
+    
+  }
+
+  @media (max-width: 1024px) and (max-height: 860px) {
+    margin-bottom:32rem; 
+  }
+
+  
+  @media (max-width: 1024px) and (max-height: 760px) {
+    margin-bottom:26rem; 
   }
 
   @media screen and (max-width: 600px) {
     margin-left: 55px;
-    top: 400px;
-    font-size: 30px;
-    width: 360px;
-    height: 60px;
+    margin-bottom:50rem; 
+    font-size: 25px;
+    width: 15rem;
+    height: 3rem;
+    line-height: 30px;
+    letter-spacing: 0.01em;
   }
 
   @media screen and (max-width: 480px) {
-    top: 350px;
+    margin-bottom:60rem; 
     font-size: 30px;
-    width: 270px;
-    height: 60px;
+    
+    
+    
   }
 
   @media screen and (max-width: 400px) {
-    top: 370px;
+    margin-bottom:18rem; 
     font-size: 30px;
     width: 250px;
     height: 60px;
   }
 
   @media screen and (max-width: 360px) {
-    top: 390px;
+    
     font-size: 30px;
     width: 230px;
     height: 60px;
   }
 
-  @media (max-width: 1000px) and (max-height: 1050px) {
-    top: 550px;
+ 
+
+  @media (max-width: 600px) and (max-height: 960px) {
+    margin-bottom:40rem;
   }
 
-  @media (max-width: 1000px) and (max-height: 850px) {
-    top: 450px;
-  }
-
-  @media (max-width: 600px) and (max-height: 900px) {
-    top: 400px;
+   @media (max-width: 600px) and (max-height: 960px) {
+    margin-bottom:40rem;
   }
 
   @media (max-width: 480px) and (max-height: 1050px) {
-    top:380px;
+    margin-bottom:30rem ;
+  }
+
+ 
+
+  @media (max-width: 600px) and (max-height: 800px) {
+    margin-top:40rem;
+    font-size: 30px;
+    width: 230px;
+    height: 60px;
+  }
+
+  @media (max-width: 480px) and (max-height: 950px) {
+    margin-top:25rem;
+    font-size: 30px;
+    width: 230px;
+    height: 60px;
   }
 
   @media (max-width: 480px) and (max-height: 800px) {
-    top: 320px;
+    margin-top:33rem;
     font-size: 30px;
     width: 230px;
     height: 60px;
   }
 
   @media (max-width: 400px) and (min-height: 800px) {
-    top: 350px;
+    margin-top:13rem;
     font-size: 30px;
     width: 230px;
     height: 60px;
-  }
+  } 
 
-  /* @media (min-width: 400px) and (max-height: 1000px) {
-    top: 370px;
+  @media (max-width: 480px) and (min-height: 1050px) {
+    margin-bottom:28rem;
     font-size: 30px;
     width: 230px;
     height: 60px;
-  } */
+  } 
 
-  &:hover {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-      #fc6a05;
-  }
+
+ 
 `;

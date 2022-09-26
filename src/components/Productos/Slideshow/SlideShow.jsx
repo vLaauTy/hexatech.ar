@@ -118,7 +118,7 @@ export const Controles = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top:40px;
+  margin-top:5rem;
 
   @media screen and (max-width:380px) {
     margin-top:80px;

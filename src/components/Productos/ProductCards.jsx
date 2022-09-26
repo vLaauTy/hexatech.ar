@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { dataSocials, datProducts, productsImg } from "../../data/dataInfo";
 import {
   CategoryButtonimg,
   CategoryCard,
@@ -19,8 +20,8 @@ const ProductCards = () => {
     whileInViewText3: { y: 0, opacity: 1, transition: { duration: 1.2 } },
     initialText2: { y: 100, opacity: 0 }
   };
-
-  const link = "https://www.facebook.com/";
+// PONER LINK DE LA TIENDA
+  console.log(dataSocials[0].LinkTienda);
 
   const [mouse, setMouse] = useState(false);
   const [mouse2, setMouse2] = useState(false);
@@ -36,14 +37,15 @@ const ProductCards = () => {
         <CategoryCardInfo>
           <CategoryIcon src="./assets/Temperatura-oscuro.png" />
           <CategoryName>Hexa Temp</CategoryName>
+          {/* PONER DESCRIPCION DEL PRODUCTO */}
           <CategoryDescription>
-            En esta sección podrá encontrar toda nuestra línea exclusiva para la
-            medición y regulación de temperaturas.
+          {datProducts[0].hexatemp}
           </CategoryDescription>
           <CategoryPolygon></CategoryPolygon>
           <CategoryImageContainer>
-            <CategoryImage src="./assets/Estufa2.png"></CategoryImage>
-            <a href={link} target="_blank" rel="noreferrer">
+            {/* PONER IMAGEN QUE REPRESENTE EL PRODUCTO */}
+            <CategoryImage src={productsImg[0].hexatemp}></CategoryImage>
+            <a href={dataSocials[0].LinkTienda} target="_blank" rel="noreferrer">
               <CategoryButtonimg
                 onMouseEnter={() => setMouse(true)}
                 onMouseLeave={() => setMouse(false)}
@@ -66,14 +68,15 @@ const ProductCards = () => {
           <CategoryIcon src="./assets/Rectangle 13.png" />
           <CategoryName>Hexa Tech</CategoryName>
           <CategoryDescription>
-            En esta sección podrá encontrar toda nuestra línea exclusiva para la
-            medición y regulación de temperaturas.
+            {/* PONER DESCRIPCION DEL PRODUCTO */}
+            {datProducts[0].hexatech}
           </CategoryDescription>
           <CategoryPolygon></CategoryPolygon>
           <CategoryImageContainer>
-            <CategoryImage src="./assets/Estufa2.png"></CategoryImage>
+            {/* PONER IMAGEN QUE REPRESENTE EL PRODUCTO */}
+            <CategoryImage src={productsImg[0].hexatech}></CategoryImage>
 
-            <a href={link} target="_blank" rel="noreferrer">
+            <a href={dataSocials[0].LinkTienda} target="_blank" rel="noreferrer">
               <CategoryButtonimg
                 onMouseEnter={() => setMouse2(true)}
                 onMouseLeave={() => setMouse2(false)}
@@ -96,13 +99,15 @@ const ProductCards = () => {
           <CategoryIcon src="./assets/Quimica-claro.png" />
           <CategoryName>Hexa Chem</CategoryName>
           <CategoryDescription>
-            En esta sección podrá encontrar toda nuestra línea exclusiva para la
-            medición y regulación de temperaturas.
+            {/* PONER DESCRIPCION DEL PRODUCTO */}
+            {datProducts[0].hexachem}
           </CategoryDescription>
           <CategoryPolygon></CategoryPolygon>
           <CategoryImageContainer>
-            <CategoryImage src="./assets/Estufa2.png"></CategoryImage>
-            <a href={link} target="_blank" rel="noreferrer">
+
+            {/* PONER IMAGEN QUE REPRESENTE EL PRODUCTO */}
+            <CategoryImage src={productsImg[0].hexachem}></CategoryImage>
+            <a href={dataSocials[0].LinkTienda} target="_blank" rel="noreferrer">
               <CategoryButtonimg
                 onMouseEnter={() => setMouse3(true)}
                 onMouseLeave={() => setMouse3(false)}

@@ -10,6 +10,7 @@ import Productos from '../components/Productos/Productos';
 
 import Sidebar from '../components/SideBar'
 
+
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -22,7 +23,7 @@ const Home = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle}/>
       <Hero/>
-      <Productos/>
+      <Productos/>  
       <Nosotros/>
       
       <Contacto/>
