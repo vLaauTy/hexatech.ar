@@ -86,8 +86,8 @@ export const Footer = () => {
         <FooterInnerContainer>
           <FooterSM>
             <FooterGroup>
-            <a href={dataSocials[0]} target="_blank" rel="noreferrer"><FacebookLogo/></a>
-            <a href={dataSocials[1]} target="_blank" rel="noreferrer"><InstagramLogo/></a>              
+            <a href={dataSocials[0].LinkFacebook} target="_blank" rel="noreferrer"><FacebookLogo/></a>
+            <a href={dataSocials[0].LinkInstagram} target="_blank" rel="noreferrer"><InstagramLogo/></a>              
             <TextContainer>
               <Paragraph color='var(--BlueColor)'>
                 Calidad y duración garantizados. 

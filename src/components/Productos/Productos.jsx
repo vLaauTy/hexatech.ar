@@ -19,6 +19,7 @@ import {
 } from "./Slideshow/SlideShow";
 import { itemsData } from "./data";
 import ProductCards from "./ProductCards";
+import { dataSocials } from "../../data/dataInfo";
 const Productos = () => {
   const [data, setData] = useState([]);
 
@@ -53,7 +54,7 @@ const Productos = () => {
                     <CategoryImageContainer>
                       
                     <CategoryImage src={product.img}></CategoryImage>
-                    <a href="https://www.esthersola.com/css-centrar-postion-absolute/"><CategoryButtonimg
+                    <a href={dataSocials[0].LinkTienda}><CategoryButtonimg
                       onMouseEnter={() => setMouse(true)}
                       onMouseLeave={() => setMouse(false)}
                       src={mouse ? "./assets/BotonFlecha.png" : "./assets/BotonVer.png"}
